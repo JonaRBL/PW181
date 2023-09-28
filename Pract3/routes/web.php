@@ -12,18 +12,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::view('/', 'welcome');
-Route::view('/form', 'formulario');
-Route::view('/recuerdos', 'recuerdos');
+//rutas tipo view
+Route::view('/', 'welcome')->name('apodoInicio');
+Route::view('/form', 'formulario')->name('apodoFormulario');
+Route::view('/recuerdos', 'recuerdos')->name('apodoRecuerdos');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/form', function () {
-    return view('formulario');
-});
-Route::get('/recuerdos', function () {
-    return view('recuerdos');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/form', function () {
+//     return view('formulario');
+// });
+// Route::get('/recuerdos', function () {
+//     return view('recuerdos');
+// });
 
 
