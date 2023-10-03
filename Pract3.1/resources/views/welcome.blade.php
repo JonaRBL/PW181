@@ -11,14 +11,10 @@
 <body>
     <h1 class="display-1 text-center text-primary">Bienvenido</h1>
     <form class="text-center">
-        <a href="/logi">
-            <button type="button" class="fs-2 btn btn-primary">Iniciar sesion</button>
-        </a>
+        <x-boton nombre="Iniciar Sesion" :ruta="route('rutaSesion')"></x-boton>
         <br>
         <br>
-        <a href="{{route('rutaRegistro')}}">
-            <button type="button" class="fs-2 btn btn-primary">Registrarse</button>
-        </a>
+        <x-boton nombre="Registrar Usuario" :ruta="route('rutaRegistro')"></x-boton>
     </form>
 </body>
 </html>
