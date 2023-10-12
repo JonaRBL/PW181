@@ -11,10 +11,14 @@
 <body>
     <h1 class="display-1 text-center text-primary">Bienvenido</h1>
     <form class="text-center">
-        <x-boton nombre="Iniciar Sesion" :ruta="route('rutaSesion')"></x-boton>
+        <a href="/logi">
+            <button type="button" class="fs-2 btn btn-primary">Iniciar Sesion</button>
+        </a>
         <br>
         <br>
-        <x-boton nombre="Registrar Usuario" :ruta="route('rutaRegistro')"></x-boton>
+        <a href="/regis">
+            <button type="button" class="fs-2 btn btn-primary">Registrar Usuario</button>
+        </a>
     </form>
 </body>
 </html>
