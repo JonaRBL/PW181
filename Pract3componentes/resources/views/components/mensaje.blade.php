@@ -1,3 +1,0 @@
-<p>
-    {{$mensaje}} - {{$fecha}}
-</p>
