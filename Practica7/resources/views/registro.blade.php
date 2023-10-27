@@ -3,11 +3,11 @@
 @section('titulo','Registro')
 
 @section('contenido')
-<div class="container">
+<div class="container mb-4">
     @if (session()->has('mensaje'))
         <script>
         Swal.fire(
-          'Good job!',
+          'Todo Correcto',
           '{!! session('mensaje') !!}',
           'success'
         ) 
@@ -20,7 +20,7 @@
             
             <script>
             Swal.fire(
-                'Oops...',
+                'Falta diligenciar correctamente algunos campos...',
                 '{{$errors->first()}}',
                 'warning'
             )
@@ -58,7 +58,7 @@
         </div>
         <div class="col-md-6">
             <label class="form-label">Email de editorial</label>
-            <input type="email" class="form-control" name="txtEmail" value="{{ old('txtEmail')}}">
+            <input type="text" class="form-control" name="txtEmail" value="{{ old('txtEmail')}}">
             <p class="fw-bold text-danger"> {{ $errors->first('txtEmail') }} </p>
         </div>
         <div class="col-12">

@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand fs-3">Biblioteca Digital</a>
+      <a class="navbar-brand fs-3">
+        <i class="fa-solid fa-book-bookmark"></i>
+        Biblioteca Digital</a>
       <div class="collapse navbar-collapse fs-5" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">

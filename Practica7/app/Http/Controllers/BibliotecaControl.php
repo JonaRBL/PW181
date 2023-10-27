@@ -15,20 +15,9 @@ class BibliotecaControl extends Controller
     }
     public function guardarLibro(validarRegistroLibro $req){
 
-        /* $validated = $req->validate([
-            'txtISBN' => 'required|numeric|digits_between:1,13',
-            'txtPaginas' => 'required|numeric',
-            'txtEmail' => 'required|email'
-        ]); */
-
-        /* $name = $req->input('txtTitulo');
-
-        return redirect('/regi')->with('confirmacion','Todo correcto: Libro "'.$name.'" guardado'); */
         $nombreLibro = $req->input('txtTitulo');
 
-        // Código para guardar el libro
-
-        return redirect('/regi')->with('mensaje', 'Todo correcto: Libro "' . $nombreLibro . '" guardado');
+        return redirect('/regi')->with('mensaje', 'Libro "' . $nombreLibro . '" guardado');
         
         
     }
