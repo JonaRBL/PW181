@@ -20,11 +20,5 @@ Route::post('/guardarRecuerdo',[diarioController::class,'guardarRecuerdo'])->nam
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-// Route::get('/form', function () {
-//     return view('formulario');
-// });
-// Route::get('/recuerdos', function () {
-//     return view('recuerdos');
-// });
 
 

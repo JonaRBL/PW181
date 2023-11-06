@@ -22,7 +22,7 @@ class validarRegistroLibro extends FormRequest
     public function rules(): array
     {
         return [
-            'txtISBN' => 'required|numeric|min:13',
+            'txtISBN' => 'required|numeric|digits_between:13,30',
             'txtPaginas' => 'required|numeric',
             'txtEmail' => 'required|email',
             'txtTitulo' => 'required',

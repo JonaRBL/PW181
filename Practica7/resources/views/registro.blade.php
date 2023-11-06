@@ -15,9 +15,6 @@
     @endif
 
     @if($errors->any())
-
-        
-            
             <script>
             Swal.fire(
                 'Falta diligenciar correctamente algunos campos...',
@@ -25,9 +22,6 @@
                 'warning'
             )
             </script>
-
-        
-
     @endif
     <form method="POST" action="/guardarLibro" class="row g-4 mt-4" >
         @csrf
