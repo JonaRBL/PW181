@@ -48,7 +48,7 @@
                     <p class="fw-bold text-danger"> {{ $errors->first('txtRecuerdo') }} </p>
                 </div>
                 
-        </div>
+        
         <div class="card-footer text-body-secondary">
             <div class="d-grid gap-2">
             <button type="submit" class="btn btn-secondary">Guardar recuerdo </button>

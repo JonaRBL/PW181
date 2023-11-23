@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('apodoInicio')?'text-danger fw-bold':''}}" href="{{route('apodoInicio')}}">Inicio</a>
+                    <a class="nav-link {{ request()->routeIs('recuerdo.inicio')?'text-danger fw-bold':''}}" href="{{route('recuerdo.inicio')}}">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('recuerdo.create')?'text-warning fw-bold':''}}" href="/recuerdo/create">Formulario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('apodoRecuerdos')?'text-success fw-bold':''}}" href="{{route('apodoRecuerdos')}}">Recuerdos</a>
+                    <a class="nav-link {{ request()->routeIs('recuerdo.index')?'text-success fw-bold':''}}" href="/recuerdo">Recuerdos</a>
                 </li>
             </ul>
         </div>

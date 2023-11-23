@@ -9,12 +9,18 @@ use Carbon\Carbon;
 
 class controllerCrudD extends Controller
 {
+    public function inicio()
+    {
+        return view('welcome');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $consR= DB::table('tb_recuerdos')->get();
+
+        return view('recuerdos',compact('consR'));
     }
 
     /**
@@ -39,7 +45,7 @@ class controllerCrudD extends Controller
 
         ]);
 
-        return redirect('/recuerdo/create')->with('confirmacion','Tu recuerdo se guardo correctamente');
+        return redirect('/recuerdo/create')->with('confirmacion','Tu recuerdo se guardo correctamente en la BD');
     }
 
     /**
@@ -61,9 +67,15 @@ class controllerCrudD extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorFormRecuerdos $request, string $id)
     {
-        //
+        DB::table('tb_recuerdos')->where('id',$id)->update([
+            "titulo"=> $request->input('txtTitulo'),
+            "recuerdo"=> $request->input('txtRecuerdo'),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('/recuerdo')->with('confirmacion','Tu recuerdo se modifico correctamente en la BD');
     }
 
     /**
@@ -71,6 +83,8 @@ class controllerCrudD extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('tb_recuerdos')->where('id',$id)->delete();
+
+        return redirect('/recuerdo')->with('confirmacion2','Tu recuerdo se elimino correctamente en la BD');
     }
 }
