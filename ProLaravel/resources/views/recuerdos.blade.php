@@ -27,7 +27,7 @@
         </div>
     @endif
     @foreach ($consR as $item)
-        <div class="card w-75 mb-3 mt-5">
+        <div class="card w-100 mt-3 mx-auto">
             <div class="card-body">
                 <h3 class="card-title fw-bold">{{$item->titulo}}</h3>
                 <p class="card-title fw-medium">{{$item->fecha}}</p>

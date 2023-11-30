@@ -1,0 +1,17 @@
+runtime: php
+
+env: flex 
+
+runtime_config:
+  document_root: public
+  php_version: 8.1
+  extensions:
+    - mysql
+
+env_variables:
+  DB_CONNECTION: "mysql"
+  DB_HOST: "/cloudsql/diariolaravel-406507:us-west1:root"
+  DB_PORT: "3306"
+  DB_DATABASE: "diario181"
+  DB_USERNAME: "root"
+  DB_PASSWORD: ""
